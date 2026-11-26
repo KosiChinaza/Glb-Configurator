@@ -88,6 +88,8 @@ body { overflow: hidden; -webkit-font-smoothing: antialiased; }
   pointer-events: none;
 }
 
+.fps-meter { top: auto !important; bottom: 64px; left: 16px !important; }
+
 /* Mobile: stack the title above, keep leva's (collapsed) panel top-right */
 @media (max-width: 640px) {
   .topbar { max-width: 100%; padding: 12px 14px; }

@@ -224,7 +224,7 @@ export default function Experience() {
         </ModelErrorBoundary>
 
         <OrbitControls makeDefault enableDamping autoRotate={rotate > 0} autoRotateSpeed={rotate} minDistance={1} maxDistance={30} />
-        {debug && <Stats />}
+        {debug && <Stats className="fps-meter" />}
       </Canvas>
 
       <div className="hud">

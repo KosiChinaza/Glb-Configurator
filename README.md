@@ -2,7 +2,7 @@
 
 A drag-and-drop **GLB viewer with a mini configurator**, built with **React Three Fiber**, **drei** and **leva**.
 
-**Live URL:** _add your Vercel/Netlify link here_
+**Live URL:** _https://glb-configurator.vercel.app/_
 
 ![poster](public/poster.webp)
 
@@ -27,11 +27,15 @@ npm run preview      # serve the production build
 
 Useful URL flags while testing:
 
-| Flag | What it does |
-|---|---|
-| `?static` | force the static fallback (simulates reduced-motion / low-power) |
-| `?3d` | force the 3D scene even if the device looks low-power |
-| `?debug` | show an FPS / ms / memory meter (for the FE-10 measurement) |
+| Device | FPS (auto-rotate on) | Idle (auto-rotate off) |
+|---|---|---|
+| Laptop (Chrome) | ~45–55, fluctuates | 0, no frames rendered |
+| Phone (Chrome, same Wi-Fi via `npm run dev -- --host`) | 57–60, steady | 0, no frames rendered |
+
+The phone holds a steady ~60 FPS. The laptop is lower and less steady, most likely
+because it renders at a higher resolution (pixel ratio up to 2) and runs on
+battery/power-saving with other tabs open. When auto-rotate is off the scene stops
+rendering entirely, so an idle page costs no GPU and the phone doesn't heat up.
 
 **Use your own default model:**
 
